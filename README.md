@@ -16,3 +16,23 @@ Semester-long capstone for Statistics II: Data Analytics.
 - **tests/** — Autograding test suite
 
 Run `python code/config_paths.py` to verify paths.
+
+Option B: Cryptocurrency Volatility & Regulation (Open Dataset Catalog)
+Research Question: How do major regulatory announcements (SEC enforcement actions, exchange bans)
+affect cryptocurrency return volatility across token types?
+Datasets:
+Dataset Source What It Provides
+CoinGecko or CoinMetrics Open Dataset Catalog Daily prices, volume, market cap for 100+ tokens
+(2018-2024)
+Economic Policy Uncertainty
+Index policyuncertainty.com Monthly uncertainty scores
+FRED pandas-datareader
+API Fed Funds Rate, VIX (market fear gauge)
+Key Variables:
+Outcome: 30-day realized volatility for each token
+Driver: Regulatory event indicator (binary: SEC action dates)
+Controls: Market cap, trading volume, Bitcoin correlation
+Groups: DeFi tokens vs. centralized exchange tokens vs. stablecoins
+Why It's Interesting: Crypto markets respond violently to regulation -- but not uniformly. When the SEC sued
+Coinbase in 2023, some tokens crashed while Bitcoin barely moved. You'd quantify which token characteristics
+predict sensitivity to regulatory shocks.

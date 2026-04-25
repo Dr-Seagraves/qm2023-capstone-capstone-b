@@ -1,0 +1,41 @@
+FIXED EFFECTS REGRESSION: Price ~ EPU_Index_Lag2 + Controls
+================================================================================
+
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:                  price   R-squared:                        0.9518
+Estimator:                   PanelOLS   R-squared (Between):              0.9740
+No. Observations:                 164   R-squared (Within):               0.9084
+Date:                Sat, Apr 25 2026   R-squared (Overall):              0.9518
+Time:                        03:11:59   Log-likelihood                   -1640.3
+Cov. Estimator:             Clustered                                           
+                                        F-statistic:                      789.05
+Entities:                           2   P-value                           0.0000
+Avg Obs:                       82.000   Distribution:                   F(4,160)
+Min Obs:                       82.000                                           
+Max Obs:                       82.000   F-statistic (robust):          8.166e+15
+                                        P-value                           0.0000
+Time periods:                      82   Distribution:                   F(4,160)
+Avg Obs:                       2.0000                                           
+Min Obs:                       2.0000                                           
+Max Obs:                       2.0000                                           
+                                                                                
+                               Parameter Estimates                                
+==================================================================================
+                Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+----------------------------------------------------------------------------------
+epu_index_lag2    -1.9231     1.2073    -1.5929     0.1132     -4.3074      0.4612
+fed_funds_rate    -733.98     291.26    -2.5200     0.0127     -1309.2     -158.77
+vix               -94.936     37.346    -2.5420     0.0120     -168.69     -21.181
+market_cap      6.035e-08  1.874e-09     32.211     0.0000   5.665e-08   6.405e-08
+==================================================================================
+
+
+
+Model Specification:
+- Entity Fixed Effects: Yes
+- Time Fixed Effects: Yes
+- Standard Errors: Clustered by Entity
+- Observations: 164
+- Entities: 2
+- Time periods: 82

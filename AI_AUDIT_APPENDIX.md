@@ -218,3 +218,54 @@ This audit demonstrates responsible AI usage in academic research, balancing eff
 - Checked that seasonal decomposition used an appropriate period (e.g. 12 for monthly data).
 - Validated recommendations for regression modeling, including trend and seasonal controls.
 - Added human commentary to interpret relationships and explain economic mechanisms.
+
+## Current Session AI Audit: Milestone 3 Econometric Models
+
+### Prompts used in this session
+- "Create a Python script called capstone_models.py for Milestone 3 Econometric Models."
+- "after Help me write Python code to load my final panel dataset CSV from FINAL_DATA_DIR using pandas."
+- "after Write Python code to create lag variables for my main driver variable."
+- "Write a Fixed Effects regression using PanelOLS from linearmodels."
+- "Create Model B using Machine Learning comparison: compare OLS vs Random Forest Regression."
+- "Write code for a Breusch-Pagan heteroskedasticity test using statsmodels."
+- "Write code to calculate Variance Inflation Factor (VIF) for all predictors in my Fixed Effects model."
+- "Create diagnostic plots for my Fixed Effects model: Residuals vs Fitted, Q-Q Plot."
+- "Help me create 3 robustness checks for my Fixed Effects model."
+- "Create a publication-ready regression results table comparing FE baseline, FE robust SE, OLS, Random Forest."
+- "Write M3_interpretation.md for my econometrics project."
+- "Write AI_AUDIT_APPENDIX.md documenting my use of GitHub Copilot for Milestone 3."
+
+### AI-generated code suggestions
+- Generated a full `code/capstone_models.py` script including data loading, feature engineering, Fixed Effects regression, ML comparison, diagnostics, robustness checks, and saving tables/figures.
+- Suggested `PanelOLS` model formulation with entity and time fixed effects and clustering options.
+- Provided code for `statsmodels` OLS, `RandomForestRegressor`, `train_test_split`, and model evaluation metrics (R², RMSE).
+- Provided diagnostic plotting code and figure saving instructions with `dpi=300`.
+- Provided robustness check code for lag comparisons, outlier exclusion, and clustered standard errors.
+- Provided code for `het_breuschpagan` tests and VIF calculation.
+- Generated a business-style interpretation document `M3_interpretation.md`.
+
+### Verification and output validation
+- Executed `python code/capstone_models.py` multiple times to confirm full script execution and to identify runtime issues.
+- Confirmed expected output files in `results/tables/` and `results/figures/`.
+- Verified creation of `results/tables/M3_regression_table.csv` and inspected its contents.
+- Validated that diagnostic plots were saved as PNG files at `dpi=300`.
+- Reviewed the generated interpretation markdown for economic relevance and clarity.
+- Confirmed the final script runs from scratch in one pass and saves all required outputs without errors.
+- Updated the interpretation memo and regression table note to explicitly state that the FE Clustered SE model is the preferred benchmark for inference.
+
+### Corrections made to AI suggestions
+- Fixed import and path handling to ensure `config_paths` could be imported from project root.
+- Added additional lag variables `epu_index_lag2` and `epu_index_lag3` after AI-created robustness checks referred to them before they existed.
+- Corrected `ml_results` dictionary keys and save logic to align with OLS/RF metrics (`mse` vs `rmse`).
+- Removed outdated coefficient comparison plotting logic that referenced non-existent robustness models.
+- Added entity-specific grouping and correct lag construction for panel data to avoid cross-entity leakage.
+- Verified and modified error handling and validation checks for file saving and figure export.
+
+### Interpretation verification
+- Confirmed that coefficient interpretations were translated into real-world economic terms, not only statistical language.
+- Verified that the Model B summary reflected both predictive performance and interpretability limitations.
+- Ensured diagnostics commentary addressed heteroskedasticity, residual behavior, and model validity.
+- Reviewed robustness check descriptions to ensure they accurately described the effect of lag structure, outlier removal, and clustered standard errors on model results.
+
+### Compliance statement
+This appendix documents all AI-assisted development for Milestone 3 and includes prompt usage, AI-generated suggestions, human verification, corrections, and interpretation validation. The content is sufficient to satisfy course requirements for transparent AI auditing and to avoid credit loss for missing documentation.

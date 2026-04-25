@@ -1,0 +1,33 @@
+FIXED EFFECTS REGRESSION RESULTS
+==================================================
+
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:              log_price   R-squared:                        0.9773
+Estimator:                   PanelOLS   R-squared (Between):              0.9818
+No. Observations:                 156   R-squared (Within):               0.6702
+Date:                Sat, Apr 25 2026   R-squared (Overall):              0.9773
+Time:                        03:29:44   Log-likelihood                   -261.90
+Cov. Estimator:            Unadjusted                                           
+                                        F-statistic:                      1298.9
+Entities:                           2   P-value                           0.0000
+Avg Obs:                       78.000   Distribution:                   F(5,151)
+Min Obs:                       78.000                                           
+Max Obs:                       78.000   F-statistic (robust):             1298.9
+                                        P-value                           0.0000
+Time periods:                      78   Distribution:                   F(5,151)
+Avg Obs:                       2.0000                                           
+Min Obs:                       2.0000                                           
+Max Obs:                       2.0000                                           
+                                                                                
+                                  Parameter Estimates                                  
+=======================================================================================
+                     Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+---------------------------------------------------------------------------------------
+fed_funds_rate         -0.2110     0.0656    -3.2173     0.0016     -0.3406     -0.0814
+vix                    -0.0363     0.0161    -2.2583     0.0254     -0.0680     -0.0045
+epu_index              -0.0188     0.0035    -5.3020     0.0000     -0.0258     -0.0118
+log_market_cap          0.4676     0.0228     20.484     0.0000      0.4225      0.5127
+price_volatility_3m    -3.0709     0.8585    -3.5770     0.0005     -4.7671     -1.3746
+=======================================================================================
+

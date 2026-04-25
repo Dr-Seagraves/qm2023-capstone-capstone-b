@@ -1,0 +1,5 @@
+Model,Main Driver Coefficient,Std_Err,P_value,Significance,R_squared,N,RMSE,Notes
+FE Baseline,-0.018811758326498954,0.0035480212553325517,3.996236361825112e-07,***,0.9772780843158496,156,,Baseline FE model with entity/time fixed effects
+FE Clustered SE,-0.018811758326498954,0.0019044267928669304,0.0,***,0.9772780843158496,156,,Preferred benchmark: accounts for entity-level heteroskedasticity and panel dependence
+OLS,0.011788860474958253,0.0024916053156977046,6.240851247245642e-06,***,0.8712266772284051,124,0.645351301036438,Linear benchmark for comparison
+Random Forest,,,,,0.9570148825203899,32,0.43089216475290626,Machine learning performance summary
